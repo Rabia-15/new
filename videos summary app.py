@@ -32,4 +32,6 @@ def download_youtube_video(youtube_url):
 
 download_files = sorted(
   os.listdir(videos_directory),
-      
+  key=lambda x: os.path.getctime(os.path.join(videos_directory, x)),
+  reverse=True
+  
